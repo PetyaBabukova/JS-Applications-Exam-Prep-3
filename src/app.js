@@ -3,7 +3,7 @@ import page from '../node_modules/page/page.mjs';
 import { authMiddleware } from './middlewares/authMiddleware.js';
 import { renderNavigationMiddleware } from "./middlewares/renderNavigationMiddleware.js";
 import { renderContentMiddleware } from './middlewares/renderContentMiddleware.js';
-// import { homeView } from './views/home.js';
+import { homeView } from './views/home.js';
 // import { loginView } from './views/login.js';
 // import { registerView } from './views/register.js';
 // import { logout } from './views/logout.js';
@@ -18,7 +18,7 @@ page(authMiddleware)
 page(renderNavigationMiddleware);
 page(renderContentMiddleware);
 
-// page('/', homeView);
+page('/', homeView);
 // page('/login', loginView);
 // page('/register', registerView);
 // page('/logout', logout);
