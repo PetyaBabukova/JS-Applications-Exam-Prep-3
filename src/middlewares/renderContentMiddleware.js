@@ -1,14 +1,12 @@
-import{render} from '../../node_modules/lit-html/lit-html.js';
+import { render } from '../../node_modules/lit-html/lit-html.js';
 
-const contentElement = document.querySelector('#main-element');
+export const renderContentMiddleware = (ctx, next) => {
+    const contentElement = document.querySelector('#main'); // Ensure this matches your HTML and moved inside the function
 
-const renderContent = (templateResult) =>{
-    render(templateResult, contentElement);
-}
+    const renderContent = (templateResult) => {
+        render(templateResult, contentElement);
+    };
 
-export const renderContentMiddleware = (ctx, next) =>{
     ctx.render = renderContent;
     next();
-}
-
-
+};

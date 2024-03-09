@@ -16,7 +16,7 @@ const navigationTemplate = (isLogged) => html`
         : html`
     <div class="guest">
         <a href="/login">Login</a>
-        <a href="/logout">Register</a>
+        <a href="/register">Register</a>
     </div>`
     }
 </nav>
